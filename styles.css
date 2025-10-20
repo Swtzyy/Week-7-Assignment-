@@ -1,0 +1,138 @@
+/* Light Mode Theme */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  text-align: center;
+}
+
+/* Loading */
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-size: 2rem;
+  color: #555;
+  z-index: 10;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none !important;
+}
+
+/* Auth */
+#auth-container,
+#otp-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  margin: 5px;
+  width: 80%;
+  max-width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* Dashboard */
+#dashboard {
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.filter-section {
+  margin: 20px 0;
+}
+
+#dog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.dog-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+}
+
+.dog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dog-actions button {
+  margin: 5px;
+}
+
+/* Modal */
+#add-dog-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-dog-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dog-card img {
+    height: 150px;
+  }
+}

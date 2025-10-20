@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawsFinder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- 🕒 Loading Screen -->
+  <div id="loading-screen">
+    <h2>🐾 PawsFinder</h2>
+  </div>
+
+  <!-- 🔐 Auth Container -->
+  <div id="auth-container" class="hidden">
+    <h2>Welcome to PawsFinder</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="login-btn">Login</button>
+    <button id="signup-btn">Signup</button>
+    <hr />
+    <input type="text" id="phone" placeholder="Phone number (+91...)" />
+    <button id="otp-btn">Send OTP</button>
+  </div>
+
+  <!-- 🔢 OTP Verification -->
+  <div id="otp-container" class="hidden">
+    <h2>Verify OTP</h2>
+    <input type="text" id="otp-code" placeholder="Enter 12345 for test" />
+    <button id="verify-btn">Verify</button>
+  </div>
+
+  <!-- 🏠 Dashboard -->
+  <div id="dashboard" class="hidden">
+    <div class="dashboard-header">
+      <h2>PawsFinder Dashboard</h2>
+      <button id="add-dog-btn">+ Add Dog</button>
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <div class="filter-section">
+      <button id="filter-all">All</button>
+      <button id="filter-lost">Lost</button>
+      <button id="filter-found">Found</button>
+    </div>
+
+    <div id="dog-list"></div>
+  </div>
+
+  <!-- 🐶 Add Dog Modal -->
+  <div id="add-dog-modal">
+    <div class="modal-content">
+      <span id="close-modal" style="float:right; cursor:pointer;">✖</span>
+      <h3>Add Dog Details</h3>
+
+      <input type="text" id="dog-url" placeholder="Paste Image URL" />
+      <input type="text" id="dog-color" placeholder="Color" />
+      <input type="text" id="dog-age" placeholder="Age (approx.)" />
+      <input type="text" id="dog-size" placeholder="Size (small/medium/large)" />
+      <input type="text" id="dog-location" placeholder="Enter or fetch location" />
+
+      <select id="dog-status">
+        <option value="found">Found</option>
+        <option value="lost">Lost</option>
+      </select>
+
+      <button id="use-location">📍 Use My Location</button>
+      <button id="save-dog-btn">Save</button>
+    </div>
+  </div>
+
+  <!-- ⚙️ Main JS -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
